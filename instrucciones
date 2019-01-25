@@ -1,0 +1,5 @@
+tsc -init    // crea la carpeta tsconfig
+
+tsc app1.ts //crea el archivo app1.js
+tsc app1.ts -w // crea el watcher solo para ese archivo
+tsc -w //el watcher observa toda la carpeta
