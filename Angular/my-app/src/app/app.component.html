@@ -2,12 +2,16 @@
 
   <h1>ngIf show = {{show}}</h1>
   <button class="btn btn-warning"(click)="show=!show">Acción</button>
-  <p class="text-info" *ngIf="show">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, voluptate
+  <p class="text-info" *ngIf="show;else showDos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, voluptate
     praesentium possimus
     et mollitia natus
     facilis aliquid modi tenetur asperiores, nam nobis minima, unde nulla. Quia laudantium asperiores veritatis earum.</p>
-  <p class="text-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, dolores. Temporibus omnis
-    eligendi, soluta repellat tenetur doloribus at facilis tempora quo! Architecto repudiandae minus rerum. Libero
-    quidem dolorem non sunt.</p>
-
+  
+    <ng-template #showDos>
+        <p class="text-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, dolores. Temporibus omnis
+            eligendi, soluta repellat tenetur doloribus at facilis tempora quo! Architecto repudiandae minus rerum. Libero
+            quidem dolorem non sunt.</p>
+        
+    </ng-template>
+    
 </div>
