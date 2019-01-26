@@ -1,17 +1,21 @@
 <div class="container">
 
-  <h1>ngIf show = {{show}}</h1>
-  <button class="btn btn-warning"(click)="show=!show">Acción</button>
-  <p class="text-info" *ngIf="show;else showDos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, voluptate
-    praesentium possimus
-    et mollitia natus
-    facilis aliquid modi tenetur asperiores, nam nobis minima, unde nulla. Quia laudantium asperiores veritatis earum.</p>
-  
-    <ng-template #showDos>
-        <p class="text-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, dolores. Temporibus omnis
-            eligendi, soluta repellat tenetur doloribus at facilis tempora quo! Architecto repudiandae minus rerum. Libero
-            quidem dolorem non sunt.</p>
-        
-    </ng-template>
-    
+  <h1>[ngClass]</h1>
+
+
+  <button class="btn btn-dark mb-3" (click)="activo='primero'">Primero</button>
+
+  <button class="btn btn-danger mb-3" (click)="activo='segundo'">Segundo</button>
+
+  <p class="text-info d-none">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, perspiciatis culpa atque facere veritatis
+    laboriosam sequi tempora. Ratione asperiores illum odio tempora pariatur molestias, ab voluptate excepturi tenetur
+    soluta quaerat.
+  </p>
+
+  <p class="text-danger d-none" [ngClass]="{'d-block':activo =='segundo'}">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus perferendis dicta nihil veritatis aspernatur
+    numquam iure voluptas deleniti? Voluptatum consectetur fugit aliquam in rerum ab eaque sit dolores harum placeat?
+  </p>
+
 </div>
