@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  show:boolean = true;  
+  show:boolean = true;
+  cursos:string[] = ['HTML','ANGULAR','PHP'];
 }
