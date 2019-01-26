@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   show:boolean = true;
-  cursos:string[] = ['HTML','ANGULAR','PHP'];
+  animales:Array<any> = [
+    {tipo:'perro',nombre:'Lisa',edad:10},
+    {tipo:'gato',nombre:'Pepon',edad:2},
+    {tipo:'pato',nombre:'tantan',edad:7}
+  ]
 }

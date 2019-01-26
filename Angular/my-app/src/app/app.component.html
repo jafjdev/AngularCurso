@@ -5,5 +5,25 @@
   <ul>
     <li *ngFor="let curso of cursos">{{curso}}</li>
   </ul>
-  <table class="table"></table>
+
+  <table class="table">
+    <thead> 
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Edad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let animal of animales; index as i">
+          <th scope="row">{{i}}</th>
+          <td>{{animal.tipo}}</td>
+          <td>{{animal.nombre}}</td>
+          <td>{{animal.edad}}</td>
+      </tr>
+
+    </tbody>
+
+  </table>
 </div>
